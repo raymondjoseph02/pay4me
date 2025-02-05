@@ -1,6 +1,6 @@
 function WhyWeBuild() {
   return (
-    <div className="h-[30vh] md:h-[50vh] lg:h-[70vh]">
+    <div className="h-[30vh] md:h-[50vh] lg:h-[70vh] xl:h-[40vh]">
       <iframe
         src="https://www.youtube.com/embed/yLVEWumxVOg?si=fVQsm9ej4xMldrwB?rel=0"
         title="YouTube video player"

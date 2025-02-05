@@ -34,6 +34,15 @@ footer ul li:hover {
   text-decoration-color: #80bc39;
 }
 
-.animate_text_parent:nth-child(even) {
-  color: red;
+.global_wrapper {
+  width: 100vw;
+}
+@media (min-width: 2560px) {
+  .global_wrapper {
+    width: 92rem;
+    margin-inline: auto;
+  }
+  footer {
+    width: 92rem;
+  }
 }

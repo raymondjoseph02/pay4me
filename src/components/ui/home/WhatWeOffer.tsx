@@ -8,7 +8,7 @@ function WhatWeOffer() {
       style={{
         backgroundImage: `url(${offers_bg})`,
       }}
-      className="bg-cover bg-no-repeat bg-top lg:px-[15.93rem]  py-[6.68rem] flex-col flex gap-20"
+      className="bg-cover bg-no-repeat bg-top lg:px-[13.93rem]  py-[6.68rem] flex-col flex gap-20"
     >
       <div className="flex flex-col justify-center items-center gap-8">
         <Barge bargeText="what we offer" />

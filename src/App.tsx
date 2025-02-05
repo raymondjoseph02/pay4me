@@ -5,13 +5,15 @@ import { GlobalProvider } from "./context/GlobalContext";
 const App = () => {
   return (
     <GlobalProvider>
-      <div className="h-[200vh] max-2xl:w-[80rem] mx-auto">
-        <NavBar />
-        <div className="relative z-30 bg-white">
-          <Home />
-        </div>
-        <div className="w-full h-auto lg:h-[50vh]  relative">
-          <Footer />
+      <div className="h-[200vh] ">
+        <div className=" global_wrapper">
+          <NavBar />
+          <div className="relative w-full z-30 bg-white">
+            <Home />
+          </div>
+          <div className="w-full h-auto lg:h-[50vh] xl:h-[30vh]  relative">
+            <Footer />
+          </div>
         </div>
       </div>
     </GlobalProvider>
