@@ -1,5 +1,6 @@
 import { FC } from "react";
 import Btn from "../buttons/Btn";
+import { motion } from "framer-motion";
 interface FeatureCardProps {
   image: string;
   title: string;
@@ -11,7 +12,25 @@ export const FeatureCard: FC<FeatureCardProps> = ({
   content,
 }) => {
   return (
-    <div className="p-8 flex-col flex gap-12 rounded-3xl bg-[#FFFFFF]">
+    <motion.div
+      initial={{
+        y: 40,
+        opacity: 0,
+      }}
+      whileInView={{
+        y: 0,
+        opacity: 1,
+      }}
+      viewport={{
+        once: true,
+        amount: 0.4,
+      }}
+      transition={{
+        ease: "easeInOut",
+        duration: 0.43,
+      }}
+      className="p-8 flex-col flex gap-12 rounded-3xl bg-[#FFFFFF]"
+    >
       <div>
         <img src={image} alt="" />
       </div>
@@ -24,6 +43,6 @@ export const FeatureCard: FC<FeatureCardProps> = ({
       <div>
         <Btn button_type="default" />
       </div>
-    </div>
+    </motion.div>
   );
 };

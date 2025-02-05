@@ -4,6 +4,7 @@ import global_icon from "../../../assets/images/global.png";
 import fast_relaible_icon from "../../../assets/images/fast.png";
 import Secure_transparent_icon from "../../../assets/images/secure.png";
 import { FeatureCard } from "./FeatureCard";
+import { motion } from "framer-motion";
 const ourFeatures = [
   {
     title: "Global Accessibility",
@@ -36,9 +37,14 @@ const Features = () => {
       >
         <div className="flex-col flex gap-8">
           <Barge bargeText="Features" />
-          <h2 className="font-bold md:text-3xl text-2xl lg:text-5xl text-[#2F2F2F] leading-[120%]">
+          <motion.h2
+            initial={{ x: -40, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            className="font-bold md:text-3xl text-2xl lg:text-5xl text-[#2F2F2F] leading-[120%]"
+          >
             What Truly sets us apart
-          </h2>
+          </motion.h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  justify-between flex-wrap gap-5">
           {ourFeatures.map((feature, index) => (

@@ -16,7 +16,7 @@ const Faq = () => {
         </div>
       </div>
       <div className="flex gap-20 flex-col lg:flex-row">
-        <div className="rounded-2xl w-full lg:w-[27.25rem] h-full overflow-hidden ">
+        <div className="rounded-2xl w-full lg:basis-1/2 h-full overflow-hidden ">
           <img src={faq_image} alt="" className="w-full h-full object-cover" />
         </div>
         <div className="rounded-3xl border-[#D8D8D8] border-[0.5px] h-full ">

@@ -4,6 +4,7 @@ import pay_4_me_logo from "../../../assets/images/logo.png";
 import Btn from "../buttons/Btn";
 import { motion } from "framer-motion";
 // import Headroom from "react-headroom";
+import { useGlobalContext } from "../../../context/GlobalContext";
 const links = [
   {
     name: "home",
@@ -24,8 +25,9 @@ const links = [
 ];
 const NavBar = () => {
   const [isActive, setIsActive] = useState("home");
+  const { setIsMobileNavOpen, isMobileNavOpen } = useGlobalContext();
   return (
-    <nav className="rounded-[2.75rem] justify-between flex bg-[#242323] pl-4 pr-2 py-2 items-center w-[70%] mx-auto max-w-[60.375rem]  fixed right-1/2 translate-1/2  z-30">
+    <nav className="min-h-[55px] rounded-[2.75rem] justify-between flex bg-[#242323] pl-4 pr-2 py-2 items-center w-[70%] mx-auto max-w-[60.375rem]  fixed right-1/2 translate-1/2  z-100">
       <div className="">
         <img
           src={pay_4_me_logo_text}
@@ -59,10 +61,32 @@ const NavBar = () => {
       <div className="hidden lg:flex">
         <Btn button_type="primary_button" />
       </div>
-      <div className="flex gap-2  flex-col pr-4 lg:hidden">
-        <div className="w-6 h-1 bg-[#80b639] inline-block"></div>
-        <div className="w-6 h-1 bg-[#80b639] inline-block"></div>
-        <div className="w-6 h-1 bg-[#80b639] inline-block"></div>
+      <div
+        onClick={() => setIsMobileNavOpen(!isMobileNavOpen)}
+        className="items-center mr-4   size-[24px] gap-1   flex justify-center  flex-col  lg:hidden  cursor-pointer relative z-50 "
+      >
+        <motion.div
+          initial={{
+            rotate: 0,
+          }}
+          animate={isMobileNavOpen ? { rotate: "45deg" } : { rotate: 0 }}
+          className="w-full h-0.5 bg-[#80b639] inline-block"
+        ></motion.div>
+        <div
+          className={`w-full h-0.5 bg-[#80b639]   ${
+            isMobileNavOpen ? "hidden" : "inline-block"
+          }`}
+        ></div>
+        <motion.div
+          initial={{
+            rotate: 0,
+            y: 0,
+          }}
+          animate={isMobileNavOpen ? { rotate: "-45deg" } : { rotate: 0 }}
+          className={`${
+            isMobileNavOpen ? "absolute" : "static"
+          } w-full h-0.5 bg-[#80b639] inline-block`}
+        ></motion.div>
       </div>
     </nav>
   );

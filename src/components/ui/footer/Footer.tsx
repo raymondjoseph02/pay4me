@@ -6,7 +6,7 @@ import { FaTiktok, FaXTwitter, FaYoutube } from "react-icons/fa6";
 import SecondaryBtn from "../buttons/SecondaryBtn";
 const Footer = () => {
   return (
-    <footer className="pt-10 pb-15 md:px-8 px-5 lg:px-21">
+    <footer className="pt-10 pb-15 md:px-8 px-5 lg:px-21 lg:fixed z-0 bottom-0">
       <div className="w-full flex gap-10 flex-col">
         <div className="flex flex-col gap-12">
           <div className="flex  gap-x-20 gap-y-13 lg:flex-row flex-col justify-between ">

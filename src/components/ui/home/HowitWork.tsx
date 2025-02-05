@@ -42,7 +42,7 @@ const HowitWork = () => {
         </h2>
       </div>
       <div className="flex-col flex gap-16">
-        <div className=" space-y-10  md:grid md:grid-cols-2  md:gap-14 items-center justify-center">
+        <div className="   md:grid  md:grid-cols-2  md:gap-14 items-center justify-center">
           {steps.map((step, index) => (
             <HowItWorkCard
               step={index + 1}

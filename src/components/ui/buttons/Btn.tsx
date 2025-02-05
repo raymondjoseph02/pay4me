@@ -46,7 +46,7 @@ const Btn: React.FC<BtnProps> = ({ button_type }) => {
 
   return (
     <button
-      className={`flex gap-3 rounded-4xl  ${bg} ${border}  ${borderWidth} ${padding} items-center`}
+      className={`flex gap-3 rounded-4xl  ${bg} ${border}  ${borderWidth} ${padding} items-center cursor-pointer`}
     >
       <span className="text-base font-medium font-[cabiet-medium] capitalize">
         {text}

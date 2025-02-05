@@ -6,7 +6,7 @@ import uni_lag from "../../../assets/images/uni_lag.png";
 import uni_ghana from "../../../assets/images/uin_ghana.png";
 import byu from "../../../assets/images/byu.png";
 import stanford from "../../../assets/images/stanford_uni.png";
-
+import { motion } from "framer-motion";
 interface OfferCardProps {
   card_type: "yellow" | "blue";
 }
@@ -25,7 +25,21 @@ const cards_type = {
 const OfferCard: React.FC<OfferCardProps> = ({ card_type }) => {
   const { title, sub_text } = cards_type[card_type];
   return (
-    <div
+    <motion.div
+      initial={{
+        y: 50,
+        opacity: 0,
+      }}
+      whileInView={{ y: 0, opacity: 1 }}
+      transition={{
+        duration: 0.25,
+        ease: "easeInOut",
+        delay: 0.32,
+      }}
+      viewport={{
+        amount: 0.23,
+        once: true,
+      }}
       className={` p-5 md:p-10 flex-col flex gap-20 rounded-3xl border-[#EFEFF9] border ${
         card_type === "yellow" ? "bg-[#FFFBE4]" : " bg-[#E7F8FF]"
       } w-fit relative`}
@@ -64,7 +78,7 @@ const OfferCard: React.FC<OfferCardProps> = ({ card_type }) => {
           <img src={blue_wings} alt="" />
         )}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

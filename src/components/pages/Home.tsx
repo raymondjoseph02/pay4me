@@ -7,10 +7,12 @@ import HowitWork from "../ui/home/HowitWork";
 import Testimony from "../ui/home/Testimony";
 import WhatWeOffer from "../ui/home/WhatWeOffer";
 import WhyWeBuild from "../ui/home/WhyWeBuild";
+import MobileLinks from "../ui/nav/MobileLinks";
 
 function Home() {
   return (
     <div>
+      <MobileLinks />
       <HeroSection />
       <Features />
       <HowitWork />

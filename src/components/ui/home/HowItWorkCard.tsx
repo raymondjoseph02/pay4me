@@ -13,8 +13,22 @@ const HowItWorkCard: React.FC<HowItWorkCardProps> = ({
 }) => {
   return (
     <motion.div
-      initial={{}}
-      viewport={{}}
+      initial={{
+        y: 20,
+        opacity: 0,
+      }}
+      whileInView={{
+        y: 0,
+        opacity: 1,
+      }}
+      viewport={{
+        once: true,
+        amount: 0.4,
+      }}
+      transition={{
+        ease: "easeInOut",
+        duration: 0.43,
+      }}
       className="p-8 gap-12 rounded-3xl flex flex-col bg-[#FFFFFF] border-[#E0E0E0] border-[0.5px]"
     >
       <div className="flex-col flex gap-12">

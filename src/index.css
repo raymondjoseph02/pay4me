@@ -33,3 +33,7 @@ footer ul li:hover {
   cursor: pointer;
   text-decoration-color: #80bc39;
 }
+
+.animate_text_parent:nth-child(even) {
+  color: red;
+}

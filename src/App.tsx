@@ -1,14 +1,20 @@
 import Home from "./components/pages/Home";
 import Footer from "./components/ui/footer/Footer";
 import NavBar from "./components/ui/nav/NavBar";
-
+import { GlobalProvider } from "./context/GlobalContext";
 const App = () => {
   return (
-    <div className="h-[200vh]">
-      <NavBar />
-      <Home />
-      <Footer />
-    </div>
+    <GlobalProvider>
+      <div className="h-[200vh]">
+        <NavBar />
+        <div className="relative z-30 bg-white">
+          <Home />
+        </div>
+        <div className="w-full h-auto lg:h-[50vh]  relative">
+          <Footer />
+        </div>
+      </div>
+    </GlobalProvider>
   );
 };
 
