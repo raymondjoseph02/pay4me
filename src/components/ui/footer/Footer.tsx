@@ -6,8 +6,13 @@ import { FaTiktok, FaXTwitter, FaYoutube } from "react-icons/fa6";
 import SecondaryBtn from "../buttons/SecondaryBtn";
 const Footer = () => {
   return (
-    <footer className="pt-10 pb-15 md:px-8 px-5 lg:px-21 lg:fixed z-0 bottom-0 ">
-      <div className="w-full flex gap-10 flex-col">
+    <footer
+      className=" relative md:h-[55rem] h-auto lg:h-[29rem] "
+      style={{
+        clipPath: "polygon(0% 0, 10% 0%, 100% 100%, 0% 100%, )",
+      }}
+    >
+      <div className="w-full flex gap-10 flex-col md:fixed bottom-0 left-0 pt-10 md:px-8 px-5 md:h-[55rem] h-auto lg:h-[29rem] pb-15">
         <div className="flex flex-col gap-12">
           <div className="flex  gap-x-20 gap-y-13 lg:flex-row flex-col justify-between ">
             <div className="flex flex-col gap-6">

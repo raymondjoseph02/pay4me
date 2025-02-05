@@ -79,7 +79,7 @@ const HeroSection = () => {
               institutions, businesses, and government agencies worldwide.
             </motion.p>
           </div>
-          <div className="flex gap-2 md:gap-6">
+          <div className="flex gap-2 md:gap-6 flex-col md:flex-row">
             <Btn button_type="primary_button" />
             <Btn button_type="watch_demo_button" />
           </div>

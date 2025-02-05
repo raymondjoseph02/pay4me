@@ -28,33 +28,35 @@ const ourFeatures = [
 
 const Features = () => {
   return (
-    <section className="px-5 md:px-10 xl:px-[7.81rem] py-10 md:py-20">
+    <section className="px-5 md:px-10 xl:px-[7.81rem] py-10 md:py-20 xl:p-0">
       <div
+        className="rounded-[2rem] bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: `url(${feature_bg})`,
         }}
-        className="flex flex-col gap-20 px-4 md:px-10 lg:px-[4.81rem] py-10 md:py-[7.87rem] rounded-[2rem] bg-cover bg-center bg-no-repeat"
       >
-        <div className="flex-col flex gap-8">
-          <Barge bargeText="Features" />
-          <motion.h2
-            initial={{ x: -40, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            viewport={{ once: true }}
-            className="font-bold md:text-3xl text-2xl lg:text-5xl text-[#2F2F2F] leading-[120%]"
-          >
-            What Truly sets us apart
-          </motion.h2>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  justify-between flex-wrap gap-5">
-          {ourFeatures.map((feature, index) => (
-            <FeatureCard
-              title={feature.title}
-              image={feature.image}
-              content={feature.content}
-              key={index}
-            />
-          ))}
+        <div className="flex flex-col gap-20 px-4 md:px-10 lg:px-[4.81rem] py-10 md:py-[7.87rem] ">
+          <div className="flex-col flex gap-8">
+            <Barge bargeText="Features" />
+            <motion.h2
+              initial={{ x: -40, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              className="font-bold md:text-3xl text-2xl lg:text-5xl text-[#2F2F2F] leading-[120%]"
+            >
+              What Truly sets us apart
+            </motion.h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  justify-between flex-wrap gap-5">
+            {ourFeatures.map((feature, index) => (
+              <FeatureCard
+                title={feature.title}
+                image={feature.image}
+                content={feature.content}
+                key={index}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>

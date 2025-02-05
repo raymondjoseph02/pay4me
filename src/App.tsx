@@ -11,9 +11,8 @@ const App = () => {
           <div className="relative w-full z-30 bg-white">
             <Home />
           </div>
-          <div className="w-full h-auto lg:h-[50vh] xl:h-[30vh]  relative">
-            <Footer />
-          </div>
+          {/* <div className="h-screen fixed"></div> */}
+          <Footer />
         </div>
       </div>
     </GlobalProvider>

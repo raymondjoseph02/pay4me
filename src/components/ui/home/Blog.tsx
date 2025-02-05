@@ -18,7 +18,7 @@ const Blog = () => {
       image: blog_image_1,
     },
     {
-      title: "Importance of getting Insurance bfroe traveling",
+      title: "Importance of getting Insurance before traveling",
       image: blog_image_2,
     },
     {
@@ -28,7 +28,7 @@ const Blog = () => {
   ];
 
   return (
-    <section className="md:px-[6.5rem] pt-20 pb-10 gap-20 flex flex-col">
+    <section className="m:px-[6.5rem] pt-20 pb-10 gap-20 flex flex-col">
       <div className="flex flex-col gap-8 justify-center items-center">
         <Barge bargeText="Blog" />
         <h2 className="text-xl md:text-4xl lg:text-5xl font-bold text-[#2F2F2F] tracking-[-2%] leading-[120%]">
