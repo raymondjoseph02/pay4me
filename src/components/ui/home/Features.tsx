@@ -28,9 +28,9 @@ const ourFeatures = [
 
 const Features = () => {
   return (
-    <section className="px-5 md:px-10 xl:px-[7.81rem] py-10 md:py-20 xl:p-0">
+    <section className="px-5 md:px-10  py-10 md:py-20 xl:px-0 ">
       <div
-        className="rounded-[2rem] bg-cover bg-center bg-no-repeat"
+        className="rounded-[2rem] bg-cover bg-center bg-no-repeat "
         style={{
           backgroundImage: `url(${feature_bg})`,
         }}

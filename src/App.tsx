@@ -11,7 +11,6 @@ const App = () => {
           <div className="relative w-full z-30 bg-white">
             <Home />
           </div>
-          {/* <div className="h-screen fixed"></div> */}
           <Footer />
         </div>
       </div>

@@ -12,10 +12,10 @@ const Footer = () => {
         clipPath: "polygon(0% 0, 10% 0%, 100% 100%, 0% 100%, )",
       }}
     >
-      <div className="w-full flex gap-10 flex-col md:fixed bottom-0 left-0 pt-10 md:px-8 px-5 md:h-[55rem] h-auto lg:h-[29rem] pb-15">
-        <div className="flex flex-col gap-12">
+      <div className=" flex gap-10 flex-col md:fixed xl:w-[90rem] xl: bottom-0  pt-10 md:px-0 px-5  md:h-[55rem] h-auto lg:h-[29rem] pb-15 w-full">
+        <div className="flex flex-col ">
           <div className="flex  gap-x-20 gap-y-13 lg:flex-row flex-col justify-between ">
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-5">
               <div className="flex gap-2 ">
                 <img
                   src={pay4me_logo}
@@ -50,7 +50,7 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            <div className="flex justify-between flex-[50%] md:flex-row flex-col gap-8">
+            <div className="flex justify-between flex-[40%] md:flex-row flex-col ">
               <div className="flex-col flex gap-4">
                 <p className="font-bold md:text-lg text-[#2F2F2F]">Company</p>
                 <ul className="flex flex-col gap-5">
@@ -95,8 +95,8 @@ const Footer = () => {
                 </ul>
               </div>
             </div>
-            <div className="flex flex-col gap-4 lg:w-[35ch]">
-              <div className="flex gap-4">
+            <div className="flex flex-col gap-4 md:max-w-[38ch]">
+              <div className="flex gap-4 ">
                 <SecondaryBtn type="appstore" />
                 <SecondaryBtn type="playstore" />
               </div>
