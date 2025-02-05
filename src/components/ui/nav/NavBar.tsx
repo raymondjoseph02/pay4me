@@ -5,27 +5,66 @@ import Btn from "../buttons/Btn";
 import { motion } from "framer-motion";
 // import Headroom from "react-headroom";
 import { useGlobalContext } from "../../../context/GlobalContext";
-const links = [
-  {
-    name: "home",
-    link: "/",
-  },
-  {
-    name: "about",
-    link: "/about",
-  },
-  {
-    name: "blog",
-    link: "/blog",
-  },
-  {
-    name: "support",
-    link: "/support",
-  },
-];
+
 const NavBar = () => {
   const [isActive, setIsActive] = useState("home");
-  const { setIsMobileNavOpen, isMobileNavOpen } = useGlobalContext();
+  const {
+    setIsMobileNavOpen,
+    isMobileNavOpen,
+    targetBlogDiv,
+    targetAboutDiv,
+    targetSupportDiv,
+  } = useGlobalContext();
+
+  const links = [
+    {
+      name: "home",
+      link: "/",
+      action: () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      },
+    },
+    {
+      name: "about",
+      link: "/about",
+      action: () => {
+        if (targetAboutDiv.current) {
+          targetAboutDiv.current.scrollIntoView({
+            behavior: "smooth",
+            block: "center",
+          });
+        }
+      },
+    },
+    {
+      name: "blog",
+      link: "/blog",
+      action: () => {
+        if (targetBlogDiv.current) {
+          targetBlogDiv.current.scrollIntoView({
+            behavior: "smooth",
+            block: "center",
+          });
+        }
+      },
+    },
+    {
+      name: "support",
+      link: "/support",
+      action: () => {
+        if (targetSupportDiv.current) {
+          targetSupportDiv.current.scrollIntoView({
+            behavior: "smooth",
+            block: "center",
+          });
+        }
+      },
+    },
+  ];
+
   return (
     <nav className="min-h-[55px] rounded-[2.75rem] justify-between flex bg-[#242323] pl-4 pr-2 py-2 items-center w-[70%] mx-auto max-w-[60.375rem]  fixed right-1/2 translate-1/2  z-100">
       <div className="">
@@ -41,7 +80,10 @@ const NavBar = () => {
           {links.map((link, i) => {
             return (
               <div
-                onClick={() => setIsActive(link.name)}
+                onClick={() => {
+                  link.action();
+                  setIsActive(link.name);
+                }}
                 className="relative cursor-pointer"
                 key={i}
               >

@@ -28,7 +28,7 @@ const ourFeatures = [
 
 const Features = () => {
   return (
-    <section className="px-5 md:px-10  py-10 md:py-20 xl:px-0 ">
+    <section className="px-5 md:px-10  py-10 md:py-20 features_wrapper">
       <div
         className="rounded-[2rem] bg-cover bg-center bg-no-repeat "
         style={{

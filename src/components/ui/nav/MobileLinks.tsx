@@ -4,7 +4,62 @@ import { useGlobalContext } from "../../../context/GlobalContext";
 import Btn from "../buttons/Btn";
 
 const MobileLinks = () => {
-  const { isMobileNavOpen } = useGlobalContext();
+  const {
+    isMobileNavOpen,
+    setIsMobileNavOpen,
+    targetSupportDiv,
+    targetAboutDiv,
+    targetBlogDiv,
+  } = useGlobalContext();
+
+  const links = [
+    {
+      name: "home",
+      link: "/",
+      action: () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      },
+    },
+    {
+      name: "about",
+      link: "/about",
+      action: () => {
+        if (targetAboutDiv.current) {
+          targetAboutDiv.current.scrollIntoView({
+            behavior: "smooth",
+            block: "center",
+          });
+        }
+      },
+    },
+    {
+      name: "blog",
+      link: "/blog",
+      action: () => {
+        if (targetBlogDiv.current) {
+          targetBlogDiv.current.scrollIntoView({
+            behavior: "smooth",
+            block: "center",
+          });
+        }
+      },
+    },
+    {
+      name: "support",
+      link: "/support",
+      action: () => {
+        if (targetSupportDiv.current) {
+          targetSupportDiv.current.scrollIntoView({
+            behavior: "smooth",
+            block: "center",
+          });
+        }
+      },
+    },
+  ];
   return (
     <motion.div
       initial={{
@@ -32,13 +87,17 @@ const MobileLinks = () => {
           }}
           className="space-y-4 text-center "
         >
-          {["Home", "About", "Blog", "Support"].map((text, i) => (
+          {links.map((link, i) => (
             <motion.li
               key={i}
               variants={{ hidden: { opacity: 0 }, visible: { opacity: 1 } }}
               className="text-center cursor-pointer "
+              onClick={() => {
+                link.action();
+                setIsMobileNavOpen(!isMobileNavOpen);
+              }}
             >
-              <SplitText text={text} />
+              <SplitText text={link.name} />
             </motion.li>
           ))}
         </motion.ul>

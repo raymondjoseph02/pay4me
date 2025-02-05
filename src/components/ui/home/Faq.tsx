@@ -1,9 +1,14 @@
 import Barge from "../Barge";
 import faq_image from "../../../assets/images/faq_image.png";
 import FaqAccordion from "./FaqAccordion";
+import { useGlobalContext } from "../../../context/GlobalContext";
 const Faq = () => {
+  const { targetSupportDiv } = useGlobalContext();
   return (
-    <section className="px-5 md:px-20 py-20 flex flex-col gap-[4.8125rem]">
+    <section
+      ref={targetSupportDiv}
+      className="px-5 md:px-20 py-20 flex flex-col gap-[4.8125rem]"
+    >
       <div className="flex-col gap-8 flex">
         <Barge bargeText="faqs" />
         <div className="flex flex-col gap-4">

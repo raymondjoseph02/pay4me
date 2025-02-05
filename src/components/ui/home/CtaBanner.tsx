@@ -3,7 +3,7 @@ import qr_code from "../../../assets/images/banner_qr_code.png";
 import SecondaryBtn from "../buttons/SecondaryBtn";
 const CtaBanner = () => {
   return (
-    <section className="py-15 px-5 md:px-8 lg:px-19 xl:p-0">
+    <section className="py-15 px-5 md:px-8 lg:px-19 banner_wrapper">
       <div
         style={{
           backgroundImage: `url(${banner_bg})`,
