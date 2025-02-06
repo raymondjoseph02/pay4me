@@ -5,6 +5,9 @@ import "react-multi-carousel/lib/styles.css";
 import student_2 from "../../../assets/images/palmer.png";
 import student_1 from "../../../assets/images/student_2.png";
 import student_3 from "../../../assets/images/student_3.png";
+import video_1 from "../../../assets/video/vid1.mp4";
+import video_2 from "../../../assets/video/videos.mp4";
+import video_3 from "../../../assets/video/vid3.mp4";
 function Testimony() {
   const responsive = {
     superLargeDesktop: {
@@ -30,21 +33,25 @@ function Testimony() {
       name: "Jimmy Adewale",
       image: student_1,
       occupation: "Entrepreneur",
+      videoUrl: video_1,
     },
     {
       name: "Palmer Nicole",
       image: student_2,
       occupation: "Phd Student",
+      videoUrl: video_2,
     },
     {
       name: "Hannah Adams",
       image: student_3,
       occupation: "Senior Therapist",
+      videoUrl: video_3,
     },
     {
       name: "Lex Brown",
       image: student_3,
       occupation: "Masters Student",
+      videoUrl: video_3,
     },
   ];
   return (
@@ -63,6 +70,7 @@ function Testimony() {
             name={student.name}
             image={student.image}
             occupation={student.occupation}
+            video={student.videoUrl}
           />
         ))}
       </Carousel>

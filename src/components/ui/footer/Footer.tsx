@@ -12,7 +12,7 @@ const Footer = () => {
         clipPath: "polygon(0% 0, 10% 0%, 100% 100%, 0% 100%, )",
       }}
     >
-      <div className=" flex gap-10 flex-col md:fixed footer_wrapper  bottom-0  pt-10  px-15  md:h-[55rem] h-auto lg:h-[29rem] pb-15 w-full">
+      <div className=" flex gap-10 flex-col md:fixed footer_wrapper  bottom-0  pt-10  px-6  md:h-[55rem] h-auto lg:h-[29rem] pb-15 w-full">
         <div className="flex flex-col ">
           <div className="flex  gap-x-20 gap-y-13 lg:flex-row flex-col justify-between ">
             <div className="flex flex-col gap-5">

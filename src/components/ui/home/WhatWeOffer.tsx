@@ -17,7 +17,7 @@ function WhatWeOffer() {
         </h2>
       </div>
       <div className="flex-col flex  gap-20">
-        <div className="flex gap-16 justify-center flex-wrap px-4 sm:px-0">
+        <div className="flex gap-16 justify-center flex-wrap px-4 sm:px-2">
           <OfferCard card_type="yellow" />
           <OfferCard card_type="blue" />
         </div>
