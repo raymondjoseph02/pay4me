@@ -62,16 +62,16 @@ const OfferCard: React.FC<OfferCardProps> = ({ card_type }) => {
         </div>
       </div>
       <div className="flex-col flex gap-10">
-        <div className="flex gap-12 items-center">
+        <div className="flex gap-12 items-center relative z-20">
           <img src={stanford} alt="" />
           <img src={uni_ghana} alt="" />
         </div>
-        <div className="flex gap-12 items-center ">
+        <div className="flex gap-12 items-center  relative z-20">
           <img src={byu} alt="" />
           <img src={uni_lag} alt="" />
         </div>
       </div>
-      <div className="absolute bottom-0 right-0">
+      <div className="absolute bottom-0 right-0 z-10">
         {card_type === "yellow" ? (
           <img src={yellow_wings} alt="" />
         ) : (
