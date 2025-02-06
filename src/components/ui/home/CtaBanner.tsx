@@ -20,7 +20,7 @@ const CtaBanner = () => {
               awesome native apps
             </p>
           </div>
-          <div className="flex gap-4 flex-col sm:flex-row ">
+          <div className="flex gap-4 flex-col sm:flex-row  w-full">
             <SecondaryBtn type="appstore" />
             <SecondaryBtn type="playstore" />
           </div>
