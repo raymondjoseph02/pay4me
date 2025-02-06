@@ -14,7 +14,7 @@ const MobileLinks = () => {
 
   const links = [
     {
-      name: "home",
+      name: "Home",
       link: "/",
       action: () => {
         window.scrollTo({
@@ -24,7 +24,7 @@ const MobileLinks = () => {
       },
     },
     {
-      name: "about",
+      name: "About",
       link: "/about",
       action: () => {
         if (targetAboutDiv.current) {
@@ -36,7 +36,7 @@ const MobileLinks = () => {
       },
     },
     {
-      name: "blog",
+      name: "Blog",
       link: "/blog",
       action: () => {
         if (targetBlogDiv.current) {
@@ -48,7 +48,7 @@ const MobileLinks = () => {
       },
     },
     {
-      name: "support",
+      name: "Support",
       link: "/support",
       action: () => {
         if (targetSupportDiv.current) {

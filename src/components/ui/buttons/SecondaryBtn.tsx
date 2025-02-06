@@ -18,7 +18,7 @@ const SecondaryBtn: React.FC<SecondaryBtnprop> = ({ type }) => {
   };
   const typeInfo = buttonType[type];
   return (
-    <button className="bg-[#000000] px-6 py-3 flex gap-4 rounded-[2.5rem] text-white justify-center items-center">
+    <button className="bg-[#000000] px-6 py-3 flex gap-4 rounded-[2.5rem] text-white justify-center items-center cursor-pointer">
       <div className="">
         <img src={typeInfo.icon} alt="" />
       </div>

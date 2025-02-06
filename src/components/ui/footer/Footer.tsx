@@ -33,24 +33,24 @@ const Footer = () => {
                 </p>
               </div>
               <div className="flex gap-4">
-                <div className="bg-black size-[2rem] rounded-full flex items-center justify-center">
+                <div className="bg-black size-[2rem] rounded-full flex items-center justify-center cursor-pointer">
                   <FaInstagram className="text-white" />
                 </div>
-                <div className="bg-black size-[2rem] rounded-full flex items-center justify-center">
+                <div className="bg-black size-[2rem] rounded-full flex items-center justify-center cursor-pointer">
                   <FaXTwitter className="text-white" />
                 </div>
-                <div className="bg-black size-[2rem] rounded-full flex items-center justify-center">
+                <div className="bg-black size-[2rem] rounded-full flex items-center justify-center cursor-pointer">
                   <FaFacebookF className="text-white" />
                 </div>
-                <div className="bg-black size-[2rem] rounded-full flex items-center justify-center">
+                <div className="bg-black size-[2rem] rounded-full flex items-center justify-center cursor-pointer">
                   <FaTiktok className="text-white" />
                 </div>
-                <div className="bg-black size-[2rem] rounded-full flex items-center justify-center">
+                <div className="bg-black size-[2rem] rounded-full flex items-center justify-center cursor-pointer">
                   <FaYoutube className="text-white" />
                 </div>
               </div>
             </div>
-            <div className="flex justify-between flex-[40%] md:flex-row flex-col ">
+            <div className="flex md:justify-between flex-[40%] md:flex-row flex-col gap-6 ">
               <div className="flex-col flex gap-4">
                 <p className="font-bold md:text-lg text-[#2F2F2F]">Company</p>
                 <ul className="flex flex-col gap-5">
